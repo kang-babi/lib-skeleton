@@ -10,7 +10,9 @@
         }
     ],
     "autoload": {
-        "Name\\Space\\": "src/"
+        "psr-4": {
+            "Name\\Space\\": "src/"
+        }
     },
     "scripts": {
         "lint": "./vendor/bin/pint -v",
