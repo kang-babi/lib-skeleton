@@ -1,6 +1,6 @@
 {
-    "name": "author/library-name",
-    "description": "Your description here",
+    "name": "kang-babi/lib-skeleton",
+    "description": "Skeleton for custom library",
     "type": "project",
     "license": "MIT",
     "authors": [
