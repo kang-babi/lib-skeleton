@@ -1,0 +1,48 @@
+{
+    "name": "author/library-name",
+    "description": "Your description here",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@email.address"
+        }
+    ],
+    "autoload": {
+        "": "src/"
+    },
+    "scripts": {
+        "lint": "./vendor/bin/pint -v",
+        "refactor": "./vendor/bin/rector process",
+        "test:lint": "./vendor/bin/pint --test",
+        "test:refactor": "./vendor/bin/rector --dry-run",
+        "test:types": "./vendor/bin/phpstan analyse",
+        "test:unit": "./vendor/bin/pest --bail",
+        "apply": [
+            "@lint",
+            "@refactor"
+        ],
+        "test": [
+            "@test:lint",
+            "@test:refactor",
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.2",
+        "pestphp/pest": "^3.7",
+        "rector/rector": "^2.0",
+        "phpstan/phpstan": "^2.1",
+        "laravel/pint": "^1.21"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
